@@ -1,54 +1,62 @@
-=============================
+====================
 cmsplugin-plain-text
-=============================
+====================
 
-.. image:: https://badge.fury.io/py/cmsplugin-plain-text.png
+|pypi| |ci| |status|
+
+.. |pypi| image:: https://badge.fury.io/py/cmsplugin-plain-text.png
     :target: https://badge.fury.io/py/cmsplugin-plain-text
+    :alt: Latest Version
 
-.. image:: https://travis-ci.org/chschuermann/cmsplugin-plain-text.png?branch=master
+.. |ci| image:: https://travis-ci.org/chschuermann/cmsplugin-plain-text.png?branch=master
     :target: https://travis-ci.org/chschuermann/cmsplugin-plain-text
+    :alt: Development Status
+
+.. |status| image:: https://img.shields.io/pypi/dm/cmsplugin-plain-text.svg
+    :target: https://pypi.python.org/pypi/cmsplugin-plain-text/
+    :alt: Downloads
 
 A simple plaintext plugin for django CMS.
 
-Documentation
--------------
+Requirements
+------------
 
-The full documentation is at https://cmsplugin-plain-text.readthedocs.org.
+- ``Django`` >= 1.5
+- ``django-cms`` >= 3.0
 
 Quickstart
 ----------
 
-Install cmsplugin-plain-text::
+Installation::
 
-    pip install cmsplugin-plain-text
+    $ pip install cmsplugin-plain-text
 
-Then use it in a project::
+Configure installed apps in your ``settings.py`` ::
 
-    import cmsplugin_plain_text
+    INSTALLED_APPS = (
+        ...,
+        'cmsplugin_plain_text',
+    )
 
-Features
---------
+Migrate your database ::
 
-* TODO
+    $ ./manage.py migrate cmsplugin_plain_text
 
-Running Tests
---------------
+If you are using Django < 1.7 in conjunction with South, make sure your SOUTH_MIGRATION_MODULES setting contains this
+line.::
 
-Does the code actually work?
-
-::
-
-    source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install -r requirements-test.txt
-    (myenv) $ python runtests.py
+    SOUTH_MIGRATION_MODULES = {
+        ...,
+        'cmsplugin_plain_text': 'cmsplugin_plain_text.south_migrations',
+    }
 
 Credits
----------
+-------
 
 Tools used in rendering this package:
 
 *  Cookiecutter_
-*  `cookiecutter-pypackage`_
+*  `cookiecutter-djangopackage`_
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage

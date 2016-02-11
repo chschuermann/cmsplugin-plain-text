@@ -50,6 +50,14 @@ line.::
         'cmsplugin_plain_text': 'cmsplugin_plain_text.south_migrations',
     }
 
+Running Tests
+-------------
+::
+
+    source <YOURVIRTUALENV>/bin/activate
+    (myenv) $ pip install -r requirements-test.txt
+    (myenv) $ python runtests.py
+
 Credits
 -------
 

@@ -13,10 +13,27 @@ try:
             }
         },
         ROOT_URLCONF="cmsplugin_plain_text.urls",
+        LANGUAGE_CODE='en',
+        LANGUAGES=(
+            ('en', 'English'),
+        ),
+        CMS_LANGUAGES={
+            1: [
+                {
+                    'code': 'en',
+                    'name': 'English',
+                    'public': True,
+                },
+            ],
+            'default': {
+                'hide_untranslated': False,
+            },
+        },
         INSTALLED_APPS=[
             "django.contrib.auth",
             "django.contrib.contenttypes",
             "django.contrib.sites",
+            'django.contrib.admin',
             "cmsplugin_plain_text",
             "cms",
             "menus",

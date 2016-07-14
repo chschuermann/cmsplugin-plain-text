@@ -2,7 +2,7 @@
 cmsplugin-plain-text
 ====================
 
-|pypi| |ci| |status|
+|pypi| |ci|
 
 .. |pypi| image:: https://badge.fury.io/py/cmsplugin-plain-text.png
     :target: https://badge.fury.io/py/cmsplugin-plain-text
@@ -11,10 +11,6 @@ cmsplugin-plain-text
 .. |ci| image:: https://travis-ci.org/chschuermann/cmsplugin-plain-text.png?branch=master
     :target: https://travis-ci.org/chschuermann/cmsplugin-plain-text
     :alt: Development Status
-
-.. |status| image:: https://img.shields.io/pypi/dm/cmsplugin-plain-text.svg
-    :target: https://pypi.python.org/pypi/cmsplugin-plain-text/
-    :alt: Downloads
 
 A simple plaintext plugin for django CMS.
 

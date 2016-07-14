@@ -9,3 +9,6 @@ class Plaintext(CMSPlugin):
 
     def __unicode__(self):
         return self.body
+
+    def __str__(self):
+        return self.body

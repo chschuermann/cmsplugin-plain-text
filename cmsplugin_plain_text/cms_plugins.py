@@ -14,4 +14,5 @@ class PlaintextPlugin(CMSPluginBase):
         context['body'] = instance.body
         return context
 
+
 plugin_pool.register_plugin(PlaintextPlugin)

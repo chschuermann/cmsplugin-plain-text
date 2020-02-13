@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
-import warnings
 
 from django.conf import settings
 from cms.api import add_plugin

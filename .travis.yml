@@ -3,10 +3,11 @@
 language: python
 
 python:
+  - "3.8"
+  - "3.7"
   - "3.5"
   - "3.4"
   - "3.3"
-  - "2.7"
 
 env:
   - DJANGO_VERSION=1.9.2
@@ -37,7 +38,7 @@ install:
   - pip install -r requirements-test.txt
 
 # command to run tests using coverage, e.g. python setup.py test
-script: coverage run --source cmsplugin_plain_text runtests.py
+script: coverage run --source cmsplugin_plain_text setup.py test
 
 after_success:
   - codecov
